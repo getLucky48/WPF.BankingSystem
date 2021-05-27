@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,12 +16,15 @@ namespace BankingSystem.Lib
         void Add(Bs_user obj);
         void Update(int id, Bs_user obj);
         bool IsExists(Bs_user obj);
+        List<Bs_user> GetList(); 
 
     }
 
     public class Bs_user : IBS_user
     {
-        
+
+        public Bs_user() { }
+
         public int id { get; set; }
         public string name { get; set; }
         public string login { get; set; }
@@ -64,6 +68,43 @@ namespace BankingSystem.Lib
             string query = $"select * from bs_user where login = '{obj.login}'";
 
             return DBUtils.ExecQuery(query);
+
+        }
+
+        public List<Bs_user> GetList()
+        {
+
+            List<Bs_user> list = new List<Bs_user>();
+
+            MySqlConnection connection = DBUtils.GetConnection();
+
+            connection.Open();
+
+            string query = $"select * from bs_user";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+
+                Bs_user user = new Bs_user()
+                {
+                    id = int.Parse(reader["id"].ToString()),
+                    name = reader["name"].ToString(),
+                    login = reader["login"].ToString(),
+                    password = reader["password"].ToString(),
+                    role = reader["role"].ToString()
+                };
+
+                list.Add(user);
+
+            }
+
+            connection.Close();
+
+            return list;
 
         }
 
