@@ -14,10 +14,6 @@ namespace BankingSystem.Lib
         string password { get; set; }
         int bs_role_id { get; set; }
         string role { get; set; }
-        void Add(Bs_user obj);
-        void Update(int id, Bs_user obj);
-        bool IsExists(Bs_user obj);
-        List<Bs_user> GetList(); 
 
     }
 
@@ -33,7 +29,7 @@ namespace BankingSystem.Lib
         public int bs_role_id { get; set; }
         public string role { get; set; }
 
-        public void Add(Bs_user obj)
+        public static void Add(Bs_user obj)
         {
 
             string query = $"insert into bs_user(name, login, password, role) values('{obj.name}', '{obj.login}', '{obj.password}', '{obj.bs_role_id}')";
@@ -42,7 +38,7 @@ namespace BankingSystem.Lib
 
         }
 
-        public void Update(int id, Bs_user obj)
+        public static void Update(int id, Bs_user obj)
         {
 
             string query = $@"
@@ -64,7 +60,7 @@ namespace BankingSystem.Lib
 
         }
 
-        public bool IsExists(Bs_user obj)
+        public static bool IsExists(Bs_user obj)
         {
 
             string query = $"select * from bs_user where login = '{obj.login}'";
@@ -73,7 +69,7 @@ namespace BankingSystem.Lib
 
         }
 
-        public List<Bs_user> GetList()
+        public static List<Bs_user> GetList()
         {
 
             List<Bs_user> list = new List<Bs_user>();
@@ -124,6 +120,18 @@ namespace BankingSystem.Lib
             connection.Close();
 
             return list;
+
+        }
+
+        public static bool IsAuthorized(Bs_user obj)
+        {
+
+            if (string.IsNullOrEmpty(obj.password)) { return false; }
+            if (string.IsNullOrEmpty(obj.login)) { return false; }
+
+            string query = $@"select * from bs_user where login = '{obj.login}' and password = '{obj.password}' ";
+
+            return DBUtils.ExecQuery(query);
 
         }
 
