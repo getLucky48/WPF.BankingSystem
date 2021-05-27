@@ -14,6 +14,7 @@ C:\Users\a.novikov\source\repos\BankingSystem\BanbingSystem.Lib\obj\Debug\netsta
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\bin\Debug\netstandard2.0\BankingSystem.Lib.deps.json
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\bin\Debug\netstandard2.0\BankingSystem.Lib.dll
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\bin\Debug\netstandard2.0\BankingSystem.Lib.pdb
+D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.csprojAssemblyReference.cache
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.AssemblyInfoInputs.cache
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.AssemblyInfo.cs
 D:\2_GitHub\WPF.BankingSystem\BanbingSystem.Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.csproj.CoreCompileInputs.cache

@@ -1,0 +1,18 @@
+﻿<Window x:Class="BankingSystem.Windows.Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Авторизация" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Width="1446" Height="930">
+    <Window.Background>
+        <ImageBrush ImageSource="/BankingSystem;component/Images/General/GradientLinear.png"/>
+    </Window.Background>
+    <Grid Width="1440" Height="900">
+        <Grid HorizontalAlignment="Left" Height="76" Margin="135,76,0,0" VerticalAlignment="Top" Width="100">
+            <Grid.Background>
+                <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Logo.png"/>
+            </Grid.Background>
+        </Grid>
+    </Grid>
+</Window>

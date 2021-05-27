@@ -17,6 +17,14 @@ namespace BankingSystem.Lib
 
     }
 
+    public enum Role
+    {
+        Admin,
+        Employee,
+        Client,
+        None
+    }
+
     public class Bs_user : IBS_user
     {
 
@@ -32,7 +40,7 @@ namespace BankingSystem.Lib
         public static void Add(Bs_user obj)
         {
 
-            string query = $"insert into bs_user(name, login, password, role) values('{obj.name}', '{obj.login}', '{obj.password}', '{obj.bs_role_id}')";
+            string query = $"insert into bs_user(name, login, password, bs_role_id) values('{obj.name}', '{obj.login}', '{obj.password}', '{obj.bs_role_id}')";
 
             DBUtils.ExecQuery(query);
 
@@ -132,6 +140,40 @@ namespace BankingSystem.Lib
             string query = $@"select * from bs_user where login = '{obj.login}' and password = '{obj.password}' ";
 
             return DBUtils.ExecQuery(query);
+
+        }
+
+        public static Role GetRole(string login)
+        {
+            
+            MySqlConnection connection = DBUtils.GetConnection();
+
+            connection.Open();
+
+            string query = $@"select * from bs_user where login = '{login}'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            int roleId = -1;
+
+            while (reader.Read())
+            {
+
+                roleId = int.Parse(reader["bs_role_id"].ToString());
+
+                break;
+                
+            }
+
+            connection.Close();
+
+            if(roleId == 1) { return Role.Admin; }
+            if(roleId == 2) { return Role.Employee; }
+            if(roleId == 3) { return Role.Client; }
+
+            return Role.None;
 
         }
 

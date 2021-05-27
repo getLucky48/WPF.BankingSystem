@@ -1,0 +1,43 @@
+﻿<Window x:Class="BankingSystem.Windows.Error"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Ошибка авторизации" Height="342.132" Width="370" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/BankingSystem;component/Images/Messages/Gradient.png" Stretch="UniformToFill">
+            <ImageBrush.RelativeTransform>
+                <TransformGroup>
+                    <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleX="2"/>
+                    <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                    <RotateTransform CenterY="0.5" CenterX="0.5"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ImageBrush.RelativeTransform>
+        </ImageBrush>
+    </Window.Background>
+    <Grid>
+        <Grid HorizontalAlignment="Center" Height="50" Margin="0,161,0,0" VerticalAlignment="Top" Width="50">
+            <Grid.Background>
+                <ImageBrush ImageSource="/BankingSystem;component/Images/Messages/setting.png"/>
+            </Grid.Background>
+        </Grid>
+        <Grid HorizontalAlignment="Center" Height="50" Margin="0,239,0,-14" VerticalAlignment="Top" Width="160" MouseLeftButtonUp="Grid_MouseLeftButtonUp" Cursor="Hand">
+            <Grid.Background>
+                <ImageBrush ImageSource="/BankingSystem;component/Images/Messages/ButtonBack.png"/>
+            </Grid.Background>
+        </Grid>
+        <Label HorizontalAlignment="Center" Margin="127,12,117,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Content="Внимание!" Height="37" Width="120" >
+            <Label.Foreground>
+                <SolidColorBrush Color="#FF070638"/>
+            </Label.Foreground>
+        </Label>
+        <TextBlock x:Name="Text"  FontFamily="Myanmar Text" HorizontalAlignment="Left" Height="96" Margin="10,49,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="344" FontSize="18">
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="#FF070638"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+    </Grid>
+</Window>

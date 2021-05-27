@@ -2,14 +2,14 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace BankingSystem
+namespace BankingSystem.Windows
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Register : Window
     {
-        public MainWindow()
+        public Register() 
         {
             InitializeComponent();
         }
@@ -18,34 +18,28 @@ namespace BankingSystem
         private void Grid_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
 
-            
-
-        }
-
-        //Login
-        private void Grid_MouseLeftButtonUp_1(object sender, MouseButtonEventArgs e)
-        {
-
-            if (string.IsNullOrEmpty(Login.Text)) { return; }
-            if (string.IsNullOrEmpty(Password.Password)) { return; }
-
             string login = Login.Text;
+            string name = Name.Text;
             string password = Utils.GetHash(Password.Password);
 
-            Bs_user obj = new Bs_user() { login = login, password = password };
+            Bs_user obj = new Bs_user() { login = login, password = password, name = name, bs_role_id = 2 };
 
-            bool isAuthorized = Bs_user.IsAuthorized(obj);
-
-            if (isAuthorized)
+            if (Bs_user.IsExists(obj))
             {
 
-                MessageBox.Show("Авторизован");
+                Error failed = new Error("Ошибка регистрации", "Пользователь с таким логином уже существует");
+                failed.ShowDialog();
 
             }
             else
             {
 
-                MessageBox.Show("Ошибка авторизации");
+                Bs_user.Add(obj);
+
+                Success success = new Success("Регистрация завершена", "Регистрация прошла успешно.\nВернитесь к окну авторизации и войдите с введенными данными");
+                success.ShowDialog();
+
+                this.Close();
 
             }
 
@@ -53,7 +47,6 @@ namespace BankingSystem
 
         private void LoginFocus(object sender, RoutedEventArgs e)
         {
-
 
             if (Login.Text.Contains("Логин")) { Login.Text = ""; }
 
@@ -77,6 +70,18 @@ namespace BankingSystem
         {
 
             if (Password.Password.Contains("Пароль")) { Password.Password = ""; }
+
+        }
+
+        private void Name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (Name.Text.Contains("ФИО")) { Name.Text = ""; }
+        }
+
+        private void Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(Name.Text)) { Name.Text = "ФИО"; }
 
         }
 

@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\2_GitHub\WPF.BankingSystem\BankingSystem\App.xaml
-1259323842
+5711208991
 
-61347670869
+10-738656389
 1361176214828
-Window\Auth.xaml;
+Windows\Register.xaml;Windows\Success.xaml;Windows\Client.xaml;Windows\Auth.xaml;Windows\Error.xaml;
 
-True
+False
 

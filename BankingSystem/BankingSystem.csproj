@@ -98,7 +98,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Window\Auth.xaml">
+    <Compile Include="Windows\Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Success.xaml.cs">
+      <DependentUpon>Success.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Client.xaml.cs">
+      <DependentUpon>Client.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Error.xaml.cs">
+      <DependentUpon>Error.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Windows\Register.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Success.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Client.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\Auth.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -106,10 +130,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Window\Auth.xaml.cs">
+    <Compile Include="Windows\Auth.xaml.cs">
       <DependentUpon>Auth.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\Error.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -137,9 +165,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Auth\GradientLinear.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Auth\Logo.png" />
@@ -176,6 +201,23 @@
       <Project>{32DF6129-A301-4965-82C8-F9B66D0B0A8F}</Project>
       <Name>BankingSystem.Lib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Messages\Gradient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Messages\ButtonBack.png" />
+    <Resource Include="Images\Messages\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\General\GradientLinear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Messages\Email.png" />
+    <Resource Include="Images\Messages\GradientGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Client\Stats.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

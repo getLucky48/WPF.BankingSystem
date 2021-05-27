@@ -1,8 +1,7 @@
 ﻿<Application x:Class="BankingSystem.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:BankingSystem"
-             StartupUri="Window/Auth.xaml">
+             StartupUri="Windows/Auth.xaml">
     <Application.Resources>
          
     </Application.Resources>

@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("window/gradientlinear.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/messages/email.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/messages/gradientgreen.png")]
 
 
