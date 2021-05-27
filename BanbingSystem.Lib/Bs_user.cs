@@ -12,6 +12,7 @@ namespace BankingSystem.Lib
         string name { get; set; }        
         string login { get; set; }
         string password { get; set; }
+        int bs_role_id { get; set; }
         string role { get; set; }
         void Add(Bs_user obj);
         void Update(int id, Bs_user obj);
@@ -29,12 +30,13 @@ namespace BankingSystem.Lib
         public string name { get; set; }
         public string login { get; set; }
         public string password { get; set; }
+        public int bs_role_id { get; set; }
         public string role { get; set; }
 
         public void Add(Bs_user obj)
         {
 
-            string query = $"insert into bs_user(name, login, password, role) values('{obj.name}', '{obj.login}', '{obj.password}', '{obj.role}')";
+            string query = $"insert into bs_user(name, login, password, role) values('{obj.name}', '{obj.login}', '{obj.password}', '{obj.bs_role_id}')";
 
             DBUtils.ExecQuery(query);
 
@@ -52,7 +54,7 @@ namespace BankingSystem.Lib
                 name = '{obj.name}', 
                 login = '{obj.login}', 
                 password = '{obj.password}', 
-                role = '{obj.role}'
+                role = '{obj.bs_role_id}'
 
                 where id = {id}
 
@@ -80,7 +82,23 @@ namespace BankingSystem.Lib
 
             connection.Open();
 
-            string query = $"select * from bs_user";
+            string query = $@"
+
+                select 
+
+                bsu.id,
+                bsu.login,
+                bsu.password,
+                bsu.name,
+                bsu.bs_role_id,
+                bsr.name as role
+
+                from bs_user bsu
+
+                join bs_role bsr on bsr.id = bsu.bs_role_id
+
+
+            ";
 
             MySqlCommand cmd = new MySqlCommand(query, connection);
 
@@ -95,6 +113,7 @@ namespace BankingSystem.Lib
                     name = reader["name"].ToString(),
                     login = reader["login"].ToString(),
                     password = reader["password"].ToString(),
+                    bs_role_id = int.Parse(reader["bs_role_id"].ToString()),
                     role = reader["role"].ToString()
                 };
 
