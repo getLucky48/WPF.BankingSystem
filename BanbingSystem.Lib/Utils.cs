@@ -2,12 +2,12 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Lib
+namespace BankingSystem.Lib
 {
     public class Utils
     {
 
-        public static string getHash(string arg)
+        public static string GetHash(string arg)
         {
 
             MD5 md5 = MD5.Create();
