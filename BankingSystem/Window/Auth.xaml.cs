@@ -14,20 +14,6 @@ namespace BankingSystem
             InitializeComponent();
         }
 
-        private void Login_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-            if (Login.Text.Contains("Логин")) { Login.Text = ""; }
-
-        }
-
-        private void Password_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-
-            if (Password.Password.Contains("Пароль")) { Password.Password = ""; }
-
-        }
-
         //Register
         private void Grid_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
         {
@@ -62,6 +48,35 @@ namespace BankingSystem
                 MessageBox.Show("Ошибка авторизации");
 
             }
+
+        }
+
+        private void LoginFocus(object sender, RoutedEventArgs e)
+        {
+
+
+            if (Login.Text.Contains("Логин")) { Login.Text = ""; }
+
+        }
+
+        private void Login_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(Login.Text)) { Login.Text = "Логин"; }
+
+        }
+
+        private void Password_LostFocus(object sender, RoutedEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(Password.Password)) { Password.Password = "Пароль"; }
+
+        }
+
+        private void Password_GotFocus(object sender, RoutedEventArgs e)
+        {
+
+            if (Password.Password.Contains("Пароль")) { Password.Password = ""; }
 
         }
 

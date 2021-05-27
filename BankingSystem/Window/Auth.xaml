@@ -33,7 +33,7 @@
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <TextBox x:Name="Login" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Логин" MouseDown="Login_MouseDown">
+                <TextBox x:Name="Login" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Логин" GotFocus="LoginFocus" LostFocus="Login_LostFocus">
                     <TextBox.Foreground>
                         <SolidColorBrush Color="#7F020F15"/>
                     </TextBox.Foreground>
@@ -43,7 +43,7 @@
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <PasswordBox x:Name="Password" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="250" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" Foreground="#7F020F15" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Password="Пароль" MouseDown="Password_MouseDown"/>
+                <PasswordBox x:Name="Password" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" VerticalAlignment="Top" Width="250" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" Foreground="#7F020F15" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Password="Пароль" LostFocus="Password_LostFocus" GotFocus="Password_GotFocus"/>
             </Grid>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="382" Margin="-61,579,0,0" VerticalAlignment="Top" Width="382">
