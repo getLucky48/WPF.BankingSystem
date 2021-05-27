@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CYIvBSRMvjjq4xirLNZDwdHMXYsaj/c7ILxxfbrHfaM1NsAOz5Q7NgteYqwyT8OqxiYUOxAv9A+tshLLNinNBw==",
+  "dgSpecHash": "7rDPfeTwtt2s/Gu5zP0Zq7oa7EjipBsko8nazF18bXbFLKhUZ5ebOJ7gJlEyV11p9aG9K3nWaDVeV5CXUpF7XQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\BankingSystem.Lib.csproj",
+  "projectFilePath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\BankingSystem.Lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\a.novikov\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\a.novikov\\.nuget\\packages\\google.protobuf\\3.14.0\\google.protobuf.3.14.0.nupkg.sha512",

@@ -1,4 +1,0 @@
-C:\Users\a.novikov\source\repos\BankingSystem\Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.csprojAssemblyReference.cache
-C:\Users\a.novikov\source\repos\BankingSystem\Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.AssemblyInfoInputs.cache
-C:\Users\a.novikov\source\repos\BankingSystem\Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.AssemblyInfo.cs
-C:\Users\a.novikov\source\repos\BankingSystem\Lib\obj\Debug\netstandard2.0\BankingSystem.Lib.csproj.CoreCompileInputs.cache

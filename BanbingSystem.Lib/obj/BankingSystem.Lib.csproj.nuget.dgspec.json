@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\BankingSystem.Lib.csproj": {}
+    "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\BankingSystem.Lib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\BankingSystem.Lib.csproj": {
+    "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\BankingSystem.Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\BankingSystem.Lib.csproj",
+        "projectUniqueName": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\BankingSystem.Lib.csproj",
         "projectName": "BankingSystem.Lib",
-        "projectPath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\BankingSystem.Lib.csproj",
+        "projectPath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\BankingSystem.Lib.csproj",
         "packagesPath": "C:\\Users\\a.novikov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\Lib\\obj\\",
+        "outputPath": "C:\\Users\\a.novikov\\source\\repos\\BankingSystem\\BanbingSystem.Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\a.novikov\\AppData\\Roaming\\NuGet\\NuGet.Config",
