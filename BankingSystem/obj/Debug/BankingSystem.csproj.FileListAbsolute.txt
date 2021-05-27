@@ -1,0 +1,14 @@
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\bin\Debug\BankingSystem.exe.config
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\bin\Debug\BankingSystem.exe
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\bin\Debug\BankingSystem.pdb
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\MainWindow.g.cs
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\App.g.cs
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem_MarkupCompile.cache
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem_MarkupCompile.lref
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\MainWindow.baml
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.g.resources
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.Properties.Resources.resources
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.GenerateResource.cache
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.csproj.CoreCompileInputs.cache
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.exe
+C:\Users\a.novikov\source\repos\BankingSystem\BankingSystem\obj\Debug\BankingSystem.pdb
