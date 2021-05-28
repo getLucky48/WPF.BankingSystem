@@ -29,6 +29,7 @@ namespace BankingSystem.Windows
             this.userId = userId;
 
             refreshAcc();
+            refreshTable();
 
         }
 
@@ -53,13 +54,14 @@ namespace BankingSystem.Windows
             success.ShowDialog();
 
             refreshAcc();
+            refreshTable();
 
         }
 
         private void Accounts_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
 
-            //todo refresh table by accountId
+            refreshTable();
 
         }
 
@@ -68,7 +70,17 @@ namespace BankingSystem.Windows
             NewTransaction newTransaction = new NewTransaction(this.userId);
             newTransaction.ShowDialog();
 
-            //todo refresh table
+            refreshAcc();
+            refreshTable();
+
+        }
+
+        private void refreshTable()
+        {
+
+
+
+            //todo
 
         }
 
@@ -79,6 +91,7 @@ namespace BankingSystem.Windows
             deposit.ShowDialog();
 
             refreshAcc();
+            refreshTable();
 
         }
 
@@ -89,6 +102,7 @@ namespace BankingSystem.Windows
             withdraw.ShowDialog();
 
             refreshAcc();
+            refreshTable();
 
         }
 

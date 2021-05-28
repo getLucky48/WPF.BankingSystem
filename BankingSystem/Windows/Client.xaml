@@ -58,5 +58,11 @@
         <Label Content="Открыть счет" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
         <Label Content="Пополнить счет" HorizontalAlignment="Left" Margin="482,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
         <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="676,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_2"/>
+        <DataGrid HorizontalAlignment="Left" Height="308" Margin="184,375,0,0" VerticalAlignment="Top" Width="658">
+            
+            
+            
+        </DataGrid>
+
     </Grid>
 </Window>

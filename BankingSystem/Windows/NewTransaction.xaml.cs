@@ -65,7 +65,11 @@ namespace BankingSystem.Windows
 
             if (string.IsNullOrEmpty(AccountDist.Text)) { AccountDist.Text = "Номер счета"; }
 
-            //todo name client
+            int distId = Bs_account.GetID(AccountDist.Text);
+
+            string owner = Bs_account.GetOwner(distId);
+
+            NameDist.Content = owner;
 
         }
 
@@ -92,8 +96,6 @@ namespace BankingSystem.Windows
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            //todo проверка на наличие такой суммы
 
             if (Accounts.SelectedIndex == -1)
             {
@@ -148,16 +150,33 @@ namespace BankingSystem.Windows
 
             }
 
+            double balance = Bs_account.GetActualBalance(srcId);
+            
+            if(balance < double.Parse(Sum.Text))
+            {
+
+                Error error = new Error("Ошибка", "Недостаточно средств");
+                error.ShowDialog();
+
+                return;
+
+            }
+
+            string descr = Descr.Text;
+            if (descr.Equals("Комментарий")) { descr = ""; }
+
             Bs_transaction transaction = new Bs_transaction()
             {
 
                 sum = double.Parse(Sum.Text),
-                descr = Descr.Text,
+                descr = descr,
                 bs_account_id_src = srcId,
                 bs_account_id_dist = distId
 
             };
 
+            Bs_account.Deposit(distId, transaction.sum);
+            Bs_account.Withdraw(srcId, transaction.sum);
             Bs_transaction.Add(transaction);
 
             Success success = new Success("Перевод выполнен", "Перевод успешно выполнен!");

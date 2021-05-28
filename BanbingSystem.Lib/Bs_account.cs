@@ -79,6 +79,48 @@ namespace BankingSystem.Lib
 
         }
 
+        public static string GetOwner(int id)
+        {
+
+            string query = $@"
+
+                select
+
+                bsu.* 
+
+                from bs_account bsa
+
+                join bs_user bsu on bsu.id = bsa.bs_user_id
+
+                where bsa.id = {id}
+
+            ";
+
+            MySqlConnection connection = DBUtils.GetConnection();
+
+            connection.Open();
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string owner = string.Empty;
+
+            while (reader.Read())
+            {
+
+                owner = reader["name"].ToString();
+
+                break;
+
+            }
+
+            connection.Close();
+
+            return owner;
+
+        }
+
         public static int GetID(string name)
         {
 
