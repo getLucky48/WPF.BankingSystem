@@ -60,3 +60,9 @@ D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Error.baml
 D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Register.g.cs
 D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Success.g.cs
 D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Error.g.cs
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\NewTransaction.baml
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\NewTransaction.g.cs
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Deposit.baml
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Deposit.g.cs
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Withdraw.baml
+D:\2_GitHub\WPF.BankingSystem\BankingSystem\obj\Debug\Windows\Withdraw.g.cs

@@ -37,8 +37,19 @@ namespace BankingSystem.Windows
             if (isAuthorized)
             {
 
+                Role role = Bs_user.GetRole(obj.login);
+                int userId = Bs_user.GetIdByLogin(obj.login);
+
+                if(role == Role.Client)
+                {
+
+                    Client client = new Client(userId);
+                    client.Show();
+                    this.Close();
+
+                }
+
                 //todo: get role and open window
-                MessageBox.Show("Авторизован");
 
             }
             else

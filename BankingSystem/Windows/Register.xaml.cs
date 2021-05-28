@@ -22,7 +22,7 @@ namespace BankingSystem.Windows
             string name = Name.Text;
             string password = Utils.GetHash(Password.Password);
 
-            Bs_user obj = new Bs_user() { login = login, password = password, name = name, bs_role_id = 2 };
+            Bs_user obj = new Bs_user() { login = login, password = password, name = name, bs_role_id = 3 };
 
             if (Bs_user.IsExists(obj))
             {

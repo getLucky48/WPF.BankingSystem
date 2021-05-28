@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="Авторизация" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Width="1446" Height="930">
     <Window.Background>
         <ImageBrush ImageSource="/BankingSystem;component/Images/General/GradientLinear.png"/>
@@ -14,5 +15,48 @@
                 <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Logo.png"/>
             </Grid.Background>
         </Grid>
+        <Grid HorizontalAlignment="Left" Height="447" Margin="832,351,0,0" VerticalAlignment="Top" Width="608">
+            <Grid.Background>
+                <ImageBrush ImageSource="/BankingSystem;component/Images/Client/Stats.png"/>
+            </Grid.Background>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="546" Margin="135,196,0,0" VerticalAlignment="Top" Width="770">
+            <Grid.Background>
+                <ImageBrush ImageSource="/BankingSystem;component/Images/Client/Table.png"/>
+            </Grid.Background>
+
+            <ComboBox x:Name="Accounts" HorizontalAlignment="Left" Margin="45,71,0,0" VerticalAlignment="Top" Width="490" Height="55" BorderBrush="{x:Null}" Foreground="{x:Null}" IsSynchronizedWithCurrentItem="False" SelectedIndex="0" SelectionChanged="Accounts_SelectionChanged">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+
+                        <Grid Height="55">
+
+                            <Grid Width="50" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="11,9,0,0">
+                                <Grid.Background>
+                                    <ImageBrush ImageSource="/BankingSystem;component/Images/Client/CardIcon.png"/>
+                                </Grid.Background>
+                            </Grid>
+
+                            <TextBlock FontSize="14" Text="Счет №" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="72,15,0,0"></TextBlock>
+                            <TextBlock FontSize="14" Text="{Binding Path=name}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,15,0,0"></TextBlock>
+                            <TextBlock FontSize="14" Text="{Binding Path=sum}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="410,15,0,0"></TextBlock>
+
+                        </Grid>
+
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+                <ComboBox.Background>
+                    <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
+                </ComboBox.Background>
+
+            </ComboBox>
+
+
+            <Label Content="Выбрать счет" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Button Content="Перевести" HorizontalAlignment="Left" Margin="569,80,0,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click"/>
+        </Grid>
+        <Label Content="Открыть счет" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
+        <Label Content="Пополнить счет" HorizontalAlignment="Left" Margin="482,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
+        <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="676,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_2"/>
     </Grid>
 </Window>

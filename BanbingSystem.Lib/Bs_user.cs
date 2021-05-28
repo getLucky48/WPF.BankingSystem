@@ -176,6 +176,35 @@ namespace BankingSystem.Lib
             return Role.None;
 
         }
+        public static int GetIdByLogin(string login)
+        {
+
+            MySqlConnection connection = DBUtils.GetConnection();
+
+            connection.Open();
+
+            string query = $@"select * from bs_user where login = '{login}'";
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            int userId = -1;
+
+            while (reader.Read())
+            {
+
+                userId = int.Parse(reader["id"].ToString());
+
+                break;
+
+            }
+
+            connection.Close();
+
+            return userId;
+
+        }
 
     }
 
