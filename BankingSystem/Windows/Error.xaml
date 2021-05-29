@@ -28,12 +28,12 @@
                 <ImageBrush ImageSource="/BankingSystem;component/Images/Messages/ButtonBack.png"/>
             </Grid.Background>
         </Grid>
-        <Label HorizontalAlignment="Center" Margin="127,12,117,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Content="Внимание!" Height="37" Width="120" >
+        <Label HorizontalAlignment="Center" Margin="127,12,117,0" VerticalAlignment="Top" FontSize="18"  Background="{x:Null}" BorderBrush="{x:Null}" FontWeight="Bold" Content="Внимание!" Height="37" Width="120" >
             <Label.Foreground>
                 <SolidColorBrush Color="#FF070638"/>
             </Label.Foreground>
         </Label>
-        <TextBlock x:Name="Text"  FontFamily="Myanmar Text" HorizontalAlignment="Left" Height="96" Margin="10,49,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="344" FontSize="18">
+        <TextBlock x:Name="Text"  HorizontalAlignment="Left" Height="96" Margin="10,49,0,0" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Width="344" FontSize="18">
             <TextBlock.Foreground>
                 <SolidColorBrush Color="#FF070638"/>
             </TextBlock.Foreground>

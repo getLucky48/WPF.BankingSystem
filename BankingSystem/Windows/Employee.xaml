@@ -20,7 +20,7 @@
                 <ImageBrush ImageSource="/BankingSystem;component/Images/Client/Stats.png"/>
             </Grid.Background>
         </Grid>
-        <Grid x:Name="Page1" HorizontalAlignment="Left" Height="566" Margin="135,196,0,0" VerticalAlignment="Top" Width="770" d:IsHidden="True">
+        <Grid x:Name="Page1" HorizontalAlignment="Left" Height="566" Margin="135,196,0,0" VerticalAlignment="Top" Width="770">
             <Grid.Background>
                 <ImageBrush ImageSource="/BankingSystem;component/Images/Client/Table.png"/>
             </Grid.Background>
@@ -45,7 +45,7 @@
             </ComboBox>
 
 
-            <Label Content="Выбрать счет" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Выбрать счет" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontWeight="Bold"/>
             <Button Content="Отменить перевод" HorizontalAlignment="Center" Margin="0,504,0,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click_1"/>
 
             <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Table" HorizontalAlignment="Center" Height="308" Margin="0,0,0,88" VerticalAlignment="Bottom" Width="658">
@@ -65,13 +65,13 @@
         </Grid>
 
 
-        <Grid x:Name="Page2" HorizontalAlignment="Left" Height="566" Margin="135,196,0,0" VerticalAlignment="Top" Width="770">
+        <Grid x:Name="Page2" HorizontalAlignment="Left" Height="566" Margin="135,196,0,0" VerticalAlignment="Top" Width="770" Visibility="Hidden">
             <Grid.Background>
                 <ImageBrush ImageSource="/BankingSystem;component/Images/Client/Table.png"/>
             </Grid.Background>
 
 
-            <Label Content="Выбрать пользователя" HorizontalAlignment="Left" Margin="58,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Выбрать пользователя" HorizontalAlignment="Left" Margin="58,22,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"  FontWeight="Bold"/>
             <Button Content="Изменить" HorizontalAlignment="Center" Margin="0,504,0,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click_2"/>
             <Button Content="Редактировать" HorizontalAlignment="Center" Margin="574,79,56,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click_3"/>
 
@@ -112,8 +112,8 @@
 
 
 
-        <Label Content="Списки счетов" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
-        <Label Content="Списки пользователей" HorizontalAlignment="Left" Margin="462,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
+        <Label Content="Списки счетов" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18"  MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
+        <Label Content="Списки пользователей" HorizontalAlignment="Left" Margin="462,93,0,0" VerticalAlignment="Top" FontSize="18"  Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
 
 
 

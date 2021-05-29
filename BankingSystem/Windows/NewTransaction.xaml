@@ -42,29 +42,29 @@
             </ComboBox>
 
 
-            <Label Content="Перевести со счета" HorizontalAlignment="Left" Margin="55,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Перевести со счета" HorizontalAlignment="Left" Margin="55,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"   FontWeight="Bold"/>
             <Button Content="Перевести" HorizontalAlignment="Center" Margin="230,429,230,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click"/>
             <Grid HorizontalAlignment="Left" Height="50" Margin="55,211,0,0" VerticalAlignment="Top" Width="300">
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <TextBox x:Name="AccountDist" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Номер счета" Foreground="#7F020F15" LostFocus="AccountDist_LostFocus" GotFocus="AccountDist_GotFocus"/>
+                <TextBox x:Name="AccountDist" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="280" FontSize="18"   Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Номер счета" Foreground="#7F020F15" LostFocus="AccountDist_LostFocus" GotFocus="AccountDist_GotFocus"/>
             </Grid>
-            <Label Content="Счет зачисления" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Счет зачисления" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"   FontWeight="Bold"/>
             <Grid HorizontalAlignment="Left" Height="50" Margin="373,211,0,0" VerticalAlignment="Top" Width="172">
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <TextBox x:Name="Sum" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Сумма в рублях" Foreground="#7F020F15" GotFocus="Sum_GotFocus" LostFocus="Sum_LostFocus"/>
+                <TextBox x:Name="Sum" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontSize="18"   Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Сумма в рублях" Foreground="#7F020F15" GotFocus="Sum_GotFocus" LostFocus="Sum_LostFocus"/>
             </Grid>
-            <Label Content="Сумма" HorizontalAlignment="Left" Margin="373,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Сумма" HorizontalAlignment="Left" Margin="373,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"   FontWeight="Bold"/>
             <Label Content="Получатель:" HorizontalAlignment="Left" Margin="55,286,0,0" VerticalAlignment="Top" FontSize="14"/>
             <Label x:Name="NameDist" Content="" HorizontalAlignment="Left" Margin="143,286,0,0" VerticalAlignment="Top" FontSize="14"/>
             <Grid HorizontalAlignment="Left" Height="50" Margin="55,344,0,0" VerticalAlignment="Top" Width="490">
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <TextBox x:Name="Descr" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Комментарий" Foreground="#7F020F15" LostFocus="Descr_LostFocus" GotFocus="Descr_GotFocus"/>
+                <TextBox x:Name="Descr" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" FontSize="18"   Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Комментарий" Foreground="#7F020F15" LostFocus="Descr_LostFocus" GotFocus="Descr_GotFocus"/>
             </Grid>
         </Grid>
     </Grid>

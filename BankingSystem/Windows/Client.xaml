@@ -52,12 +52,12 @@
             </ComboBox>
 
 
-            <Label Content="Выбрать счет" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Выбрать счет" HorizontalAlignment="Left" Margin="45,23,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontWeight="Bold"/>
             <Button Content="Перевести" HorizontalAlignment="Left" Margin="569,80,0,0" VerticalAlignment="Top" Width="140" Height="35" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click"/>
         </Grid>
-        <Label Content="Открыть счет" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
-        <Label Content="Пополнить счет" HorizontalAlignment="Left" Margin="482,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
-        <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="676,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_2"/>
+        <Label Content="Открыть счет" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
+        <Label Content="Пополнить счет" HorizontalAlignment="Left" Margin="482,93,0,0" VerticalAlignment="Top" FontSize="18" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
+        <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="676,93,0,0" VerticalAlignment="Top" FontSize="18" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_2"/>
         <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Table" HorizontalAlignment="Left" Height="308" Margin="184,375,0,0" VerticalAlignment="Top" Width="658">
 
             <DataGrid.Columns>

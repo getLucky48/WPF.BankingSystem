@@ -42,15 +42,15 @@
             </ComboBox>
 
 
-            <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="55,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="55,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"   FontWeight="Bold"/>
             <Button Content="Снять" HorizontalAlignment="Center" Margin="401,211,55,0" VerticalAlignment="Top" Width="144" Height="50" Background="{x:Null}" BorderBrush="#FF1A9DC3" Foreground="#FF1A9DC3" FontWeight="Bold" Click="Button_Click"/>
             <Grid HorizontalAlignment="Left" Height="50" Margin="55,211,0,0" VerticalAlignment="Top" Width="328">
                 <Grid.Background>
                     <ImageBrush ImageSource="/BankingSystem;component/Images/Auth/Input.png"/>
                 </Grid.Background>
-                <TextBox x:Name="Sum" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="18" FontFamily="Myanmar Text" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Сумма в рублях" Foreground="#7F020F15" GotFocus="Sum_GotFocus" LostFocus="Sum_LostFocus"/>
+                <TextBox x:Name="Sum" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="18"   Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Text="Сумма в рублях" Foreground="#7F020F15" GotFocus="Sum_GotFocus" LostFocus="Sum_LostFocus"/>
             </Grid>
-            <Label Content="Сумма" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18" FontFamily="Myanmar Text" FontWeight="Bold"/>
+            <Label Content="Сумма" HorizontalAlignment="Left" Margin="55,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.079,-0.462" FontSize="18"   FontWeight="Bold"/>
         </Grid>
     </Grid>
 </Window>
