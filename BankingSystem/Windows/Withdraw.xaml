@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         DataContext="{Binding RelativeSource={RelativeSource Self}}"
-        Title="Авторизация" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Width="580" Height="324">
+        Title="Вывод средств" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Width="580" Height="324">
     <Window.Background>
         <ImageBrush ImageSource="/BankingSystem;component/Images/General/GradientLinear.png"/>
     </Window.Background>

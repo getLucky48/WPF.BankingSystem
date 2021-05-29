@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Ошибка авторизации" Height="342.132" Width="370" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Ошибка" Height="342.132" Width="370" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <ImageBrush ImageSource="/BankingSystem;component/Images/Messages/Gradient.png" Stretch="UniformToFill">
             <ImageBrush.RelativeTransform>

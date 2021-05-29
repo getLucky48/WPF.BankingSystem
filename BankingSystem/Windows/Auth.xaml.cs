@@ -9,8 +9,6 @@ namespace BankingSystem.Windows
     /// </summary>
     public partial class Auth : Window
     {
-        //todo change windows title ALL
-        //todo change all fonts to segoi
 
         public Auth() 
         {
