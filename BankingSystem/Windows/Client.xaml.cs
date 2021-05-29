@@ -1,6 +1,7 @@
 ﻿using BankingSystem.Lib;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 
@@ -13,6 +14,7 @@ namespace BankingSystem.Windows
     {
 
         public List<Bs_account> accountList { get; set; }
+        public List<Bs_transaction> transactionList { get; set; }
 
         public Client()
         {
@@ -29,7 +31,6 @@ namespace BankingSystem.Windows
             this.userId = userId;
 
             refreshAcc();
-            refreshTable();
 
         }
 
@@ -42,6 +43,20 @@ namespace BankingSystem.Windows
             Accounts.ItemsSource = this.accountList;
 
             if(this.accountList.Count != 0) { Accounts.SelectedIndex = 0; }
+
+        }
+        private void refreshTable()
+        {
+
+            int srcId = -1;
+
+            if(Accounts.SelectedIndex != -1) { srcId = ((Bs_account)Accounts.SelectedItem).id; }
+
+            this.transactionList = Bs_transaction.GetList(srcId);
+
+            Table.ItemsSource = this.transactionList;
+
+            //todo
 
         }
 
@@ -72,15 +87,6 @@ namespace BankingSystem.Windows
 
             refreshAcc();
             refreshTable();
-
-        }
-
-        private void refreshTable()
-        {
-
-
-
-            //todo
 
         }
 

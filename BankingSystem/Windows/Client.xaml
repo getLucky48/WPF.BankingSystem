@@ -58,9 +58,17 @@
         <Label Content="Открыть счет" HorizontalAlignment="Left" Margin="305,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" MouseUp="Label_MouseUp" Cursor="Hand" FontWeight="Bold"/>
         <Label Content="Пополнить счет" HorizontalAlignment="Left" Margin="482,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_1"/>
         <Label Content="Снять со счета" HorizontalAlignment="Left" Margin="676,93,0,0" VerticalAlignment="Top" FontSize="18" FontFamily="Myanmar Text" Cursor="Hand" FontWeight="Bold" MouseUp="Label_MouseUp_2"/>
-        <DataGrid HorizontalAlignment="Left" Height="308" Margin="184,375,0,0" VerticalAlignment="Top" Width="658">
-            
-            
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" x:Name="Table" HorizontalAlignment="Left" Height="308" Margin="184,375,0,0" VerticalAlignment="Top" Width="658">
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Сумма" Width="100" Binding="{Binding Path=sum}"/>
+                <DataGridTextColumn Header="Комментарий к переводу" Width="200" Binding="{Binding Path=descr}"/>
+                <DataGridTextColumn Header="Счет списания" Width="175" Binding="{Binding Path=bs_account_name_src}"/>
+                <DataGridTextColumn Header="Счет зачисления" Width="175" Binding="{Binding Path=bs_account_name_dist}"/>
+
+            </DataGrid.Columns>
+         
             
         </DataGrid>
 

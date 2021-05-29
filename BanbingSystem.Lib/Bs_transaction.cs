@@ -14,6 +14,9 @@ namespace BankingSystem.Lib
         string descr { get; set; }
         int bs_account_id_src { get; set; }
         int bs_account_id_dist { get; set; }
+        string bs_account_name_src { get; set; }
+        string bs_account_name_dist { get; set; }
+
 
     }
 
@@ -27,6 +30,8 @@ namespace BankingSystem.Lib
         public string descr { get; set; }
         public int bs_account_id_src { get; set; }
         public int bs_account_id_dist { get; set; }
+        public string bs_account_name_src { get; set; }
+        public string bs_account_name_dist { get; set; }
 
         public static void Add(Bs_transaction obj)
         {
@@ -45,7 +50,7 @@ namespace BankingSystem.Lib
 
         }
 
-        public static List<Bs_transaction> GetList(int accountId, bool expenses)
+        public static List<Bs_transaction> GetList(int accountId)
         {
 
             List<Bs_transaction> list = new List<Bs_transaction>();
@@ -54,11 +59,17 @@ namespace BankingSystem.Lib
 
                 select
 
-                * 
+                bst.*,
+           		bsaSrc.name as nameSrc,
+           		bsaDist.name as nameDist
 
-                from bs_transaction 
+                from bs_transaction bst
 
-                where {(expenses ? "bs_account_id_src" : "bs_account_id_dist")} = {accountId}
+				join bs_account bsaSrc on bsaSrc.id = bst.bs_account_id_src
+				join bs_account bsaDist on bsaDist.id = bst.bs_account_id_dist
+
+                where bst.bs_account_id_dist = {accountId}
+                or bst.bs_account_id_src = {accountId}
 
             ";
 
@@ -80,7 +91,9 @@ namespace BankingSystem.Lib
                     sum = double.Parse(reader["sum"].ToString()),
                     descr = reader["descr"].ToString(),
                     bs_account_id_src = int.Parse(reader["bs_account_id_src"].ToString()),
-                    bs_account_id_dist = int.Parse(reader["bs_account_id_dist"].ToString())
+                    bs_account_id_dist = int.Parse(reader["bs_account_id_dist"].ToString()),
+                    bs_account_name_src = reader["nameSrc"].ToString(),
+                    bs_account_name_dist = reader["nameDist"].ToString()
 
                 };
 
