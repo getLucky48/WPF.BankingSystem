@@ -50,6 +50,15 @@ namespace BankingSystem.Lib
 
         }
 
+        public static void Delete(int id)
+        {
+
+            string query = $"delete from bs_transaction where id = {id}";
+
+            DBUtils.ExecQuery(query);
+
+        }
+
         public static List<Bs_transaction> GetList(int accountId)
         {
 

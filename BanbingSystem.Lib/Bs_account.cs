@@ -33,12 +33,14 @@ namespace BankingSystem.Lib
 
         }
 
-        public static List<Bs_account> GetList(int bs_iser_id)
+        public static List<Bs_account> GetList(int bs_iser_id = -1)
         {
 
             List<Bs_account> list = new List<Bs_account>();
 
-            string query = $@"select * from bs_account where bs_user_id = '{bs_iser_id}'";
+            string customWhere = bs_iser_id == -1 ? "1" : $"bs_user_id = {bs_iser_id}";
+            
+            string query = $@"select * from bs_account where {customWhere}";
 
             MySqlConnection connection = DBUtils.GetConnection();
 
@@ -67,6 +69,25 @@ namespace BankingSystem.Lib
             connection.Close();
 
             return list;
+
+        }
+
+        public static void Update(int id, Bs_account obj)
+        {
+
+            string query = $@"
+
+                update bs_account 
+
+                set 
+
+                sum = {obj.sum}
+
+                where id = {id}
+
+            ";
+
+            DBUtils.ExecQuery(query);
 
         }
 

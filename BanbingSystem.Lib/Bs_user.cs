@@ -58,7 +58,7 @@ namespace BankingSystem.Lib
                 name = '{obj.name}', 
                 login = '{obj.login}', 
                 password = '{obj.password}', 
-                role = '{obj.bs_role_id}'
+                bs_role_id = '{obj.bs_role_id}'
 
                 where id = {id}
 
@@ -77,7 +77,7 @@ namespace BankingSystem.Lib
 
         }
 
-        public static List<Bs_user> GetList()
+        public static List<Bs_user> GetList(int bs_role_id = -1)
         {
 
             List<Bs_user> list = new List<Bs_user>();
@@ -85,6 +85,8 @@ namespace BankingSystem.Lib
             MySqlConnection connection = DBUtils.GetConnection();
 
             connection.Open();
+
+            string customWhere = bs_role_id == -1 ? "1" : $"bsu.bs_role_id = {bs_role_id}";
 
             string query = $@"
 
@@ -101,6 +103,7 @@ namespace BankingSystem.Lib
 
                 join bs_role bsr on bsr.id = bsu.bs_role_id
 
+                where {customWhere}
 
             ";
 

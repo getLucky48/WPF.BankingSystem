@@ -98,6 +98,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Windows\Employee.xaml.cs">
+      <DependentUpon>Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\_edit_Account.xaml.cs">
+      <DependentUpon>_edit_Account.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\_edit_User.xaml.cs">
+      <DependentUpon>_edit_User.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\Withdraw.xaml.cs">
       <DependentUpon>Withdraw.xaml</DependentUpon>
     </Compile>
@@ -119,6 +128,18 @@
     <Compile Include="Windows\Error.xaml.cs">
       <DependentUpon>Error.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\Employee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\_edit_Account.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\_edit_User.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\Withdraw.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -245,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Client\CardIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\General\LayoutSquare.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

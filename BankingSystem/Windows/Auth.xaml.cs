@@ -9,6 +9,9 @@ namespace BankingSystem.Windows
     /// </summary>
     public partial class Auth : Window
     {
+        //todo change windows title ALL
+        //todo change all fonts to segoi
+
         public Auth() 
         {
             InitializeComponent();
@@ -45,11 +48,26 @@ namespace BankingSystem.Windows
 
                     Client client = new Client(userId);
                     client.Show();
+
                     this.Close();
 
                 }
+                else if(role == Role.Admin || role == Role.Employee)
+                {
 
-                //todo: get role and open window
+                    Employee employee = new Employee(userId);
+                    employee.Show();
+
+                    this.Close();
+
+                }
+                else
+                {
+
+                    Error error = new Error("Ошибка", "В момент авторизации произошла непредвиденная ошибка");
+                    error.ShowDialog();
+
+                }
 
             }
             else

@@ -56,8 +56,6 @@ namespace BankingSystem.Windows
 
             Table.ItemsSource = this.transactionList;
 
-            //todo
-
         }
 
         private void Label_MouseUp(object sender, MouseButtonEventArgs e)
