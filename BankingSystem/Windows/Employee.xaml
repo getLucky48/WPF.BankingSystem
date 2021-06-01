@@ -32,7 +32,7 @@
                         <Grid Height="55">
 
                             <TextBlock FontSize="14" Text="{Binding Path=name}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,15,0,0"></TextBlock>
-                            <TextBlock FontSize="14" Text="{Binding Path=sum}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="250,15,0,0"></TextBlock>
+                            <TextBlock FontSize="14" Text="{Binding Path=sum}" Foreground="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="350,15,0,0"></TextBlock>
 
                         </Grid>
 

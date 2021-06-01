@@ -44,19 +44,19 @@ namespace BankingSystem.Windows
                 if(role == Role.Client)
                 {
 
+                    this.Hide();
                     Client client = new Client(userId);
-                    client.Show();
-
-                    this.Close();
+                    client.ShowDialog();
+                    this.Show();
 
                 }
                 else if(role == Role.Admin || role == Role.Employee)
                 {
 
+                    this.Hide();
                     Employee employee = new Employee(userId);
-                    employee.Show();
-
-                    this.Close();
+                    employee.ShowDialog();
+                    this.Show();
 
                 }
                 else
