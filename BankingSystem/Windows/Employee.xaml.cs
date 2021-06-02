@@ -120,7 +120,7 @@ namespace BankingSystem.Windows
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
-            Bs_transaction selected = (Bs_transaction)UserAccounts.SelectedItem;
+            Bs_transaction selected = (Bs_transaction)Table.SelectedItem;
 
             if (selected == null) {
 
